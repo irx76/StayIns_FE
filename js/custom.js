@@ -12,7 +12,7 @@ function updateSelection3(selection){
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
-  spaceBetween: -40,
+  spaceBetween: -70,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -93,34 +93,36 @@ function populateBoardingsaround(response) {
     const slide = document.createElement('div');
     slide.className = 'swiper-slide';
     slide.innerHTML = `
+     
       <div class="w-96 p-5 h-72">
-        <div class="border rounded-lg p-5 bg-brand-lightblue">
+        <div class="border rounded-lg p-5 bg-brand-lightblue w-96 h-200">
           <img class="h-60 w-full object-cover rounded-md" src="data:image/png;base64,${boarding.image1}" alt="">
           <div class="deets mt-10 max-h-full">
-            <div class="firsrow flex">
-              <div class="location flex">
+            <div id="firstrow" class="firsrow flex">
+              <div id="location" class="location flex" >
                 <i class="fa-solid fa-location-dot pt-3 fa-lg" style="color: #dcd7c9;"></i>
-                <p class="text-Cream ml-6 text-lg maxwidth_137px">${boarding.city}</p>
+                <p class="text-Cream ml-3 text-lg text-left" style="min-width: 122px; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">${boarding.city}</p>
               </div>
-              <div class="boarder_type ml-10 flex w-full">
+              <div id="boarder_type" class="h-20 boarder_type ml-6 flex w-full">
                 <i class="fa-solid fa-user pt-3 fa-lg" style="color: #dcd7c9;"></i>
-                <p class="text-Cream ml-3 text-lg max">${boarding.boarderType}</p>
+                <p class="text-Cream text-lg pl-3 " style="text-align: left; min-width: 122px; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">${boarding.boarderType}</p>
               </div>
             </div>
-            <div class="secondrow pt-5 flex">
-              <div class="Bed flex">
-                <i class="fa-solid fa-bed pt-3 fa-lg" style="color: #dcd7c9;"></i>
-                <p class="text-Cream pl-3 text-lg text-left maxwidth_137px">${boarding.monthlyFee}</p>
-              </div>
-              <div class="room_type flex ml-5">
-                <i class="fa-solid fa-home pt-3 fa-lg" style="color: #dcd7c9;"></i>
-                <p class="text-Cream ml-3 text-lg">${boarding.boardingType}</p>
-              </div>
+            <div id="secondrow" class="secondrow flex">
+              <div id="RentFee" class="Bed flex">
+                <i class="fa-solid fa-sack-dollar pt-3 fa-lg" style="color: #dcd7c9;"></i>
+                <p class="text-Cream ml-3 text-lg text-left" style="min-width:122px; overflow: hidden; text-overflow: ellipsis; max-width: 150px;" >Rs. ${boarding.monthlyFee}</p>
             </div>
-            <button class="mt-10 px-6 py-3 rounded-md bg-brand-yellow text-brand-lightblue">Read More</button>
+            <div id="BoardingType" class="room_type flex ml-5">
+              <i class="fa-solid fa-home pt-3 fa-lg " style="color: #dcd7c9;"></i>
+              <p class="text-Cream pl-2 text-lg text-left">${boarding.boardingType}</p>
+            </div>
+            </div>
+          <button class="mt-10 px-6 py-3 rounded-md bg-brand-yellow text-brand-lightblue">Read More</button>
           </div>
         </div>
       </div>
+      
     `;
     
     // Append the slide to the swiper wrapper
@@ -129,6 +131,9 @@ function populateBoardingsaround(response) {
   
   // If using SwiperJS, reinitialize or update the swiper here
   // swiper.update(); or new Swiper('.swiper-container', {...});
+  if (typeof swiper !== 'undefined') {
+    swiper.update();
+  }
 }
 
 
