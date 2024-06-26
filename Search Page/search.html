@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay-Ins</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="search.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!--Nav Bar-->
+  <nav class="fixed sticky bg-white border-gray-200 dark:bg-gray-900">
+    <div class="navbar_width fixed flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="LOGO.png" class="Logo" alt="Stay-Ins Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white navbar_text">Stay-Ins</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul style="height: 30px;"
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 navbar_text">
+          <li>
+            <span class="lis_horizontal">
+              <i class="fa-solid fa-comment margin-R-20px" style="color: #dcd7c9;"></i>
+              <a href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 navbar_text md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover_navbar:hover">Chat</a>
+            </span>
+          </li>
+          <li style="margin-right: 30px;">
+            <span class="lis_horizontal">
+              <i class="fa-solid fa-house margin-R-20px hover_navbar:hover" style="color: #dcd7c9;"></i>
+              <a href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 navbar_text md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover_navbar:hover">List
+                your property</a>
+            </span>
+          </li>
+          <li style="display: flex; flex-direction: column; justify-content: flex-end;">
+            <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center navbarbutton dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Nav Bar End-->
+
+  <div class="content_body">
+    <div class="side_bar">
+      <!--Side Bar-->
+      <aside id="default-sidebar"
+        class="sticky top-22 left-0 z-40 w-100 h-screen bg-white h-screen transition-transform -translate-x-full sm:translate-x-0 "
+        aria-label="Sidebar">
+        <div class="side_bar_top h-full px-3 py-3 overflow-y-auto bg-white dark:bg-gray-800">
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#"
+                class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-slate-900 dark:hover:bg-gray-700 group">
+                <svg
+                  class="w-5 h-5 text-slate-900 transition duration-75 dark:text-gray-400 group-hover:text-slate-900 dark:group-hover:text-white"
+                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21"></svg>
+                <span class="ms-3" class="sidebar-text">Search Filters</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-slate-900 dark:hover:bg-gray-700 group">
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-slate-900 transition duration-75 dark:text-gray-400 group-hover:text-slate-900 dark:group-hover:text-white"
+                  aria-hidden="true" fill="currentColor" viewBox="0 0 18 18"></svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Category</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-slate-900 dark:hover:bg-gray-700 group">
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-slate-900 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"></svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Reviews and Ratings</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-slate-900 dark:hover:bg-gray-700 group">
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-slate-900 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"></svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Property Listings</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-slate-900 dark:hover:bg-gray-700 group">
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-slate-900 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20"></svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Bed Type</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-slate-900 dark:hover:bg-gray-700 group">
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-slate-900 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16"></svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Price Range</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!--Side Bar End-->
+    </div>
+
+    <div class="results">
+      <!--Breadcrumbs-->
+      <nav class="flex breadcrumb_bar" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+          <li class="inline-flex items-center">
+            <a href="#"
+              class="inline-flex items-center text-sm font-medium text-white hover:text-white dark:text-gray-400 dark:hover:text-white breadcrumb_text">
+              <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 20">
+                <path
+                  d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <svg class="rtl:rotate-180 w-3 h-3 text-white mx-1 breadcrumb_text" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 9 4-4-4-4" />
+              </svg>
+              <a href="#"
+                class="ms-1 text-sm font-medium text-white hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white breadcrumb_text">Search</a>
+            </div>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <svg class="rtl:rotate-180 w-3 h-3 text-white mx-1 breadcrumb_text" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 9 4-4-4-4" />
+              </svg>
+              <span class="ms-1 text-sm font-medium text-white md:ms-2 dark:text-gray-400 breadcrumb_text">Search
+                Results</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+      <!--Breadcrumb End-->
+
+      <!--Search Results-->
+      <div class="main-box">
+        <div class="search-results">
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Rooms for Rent in
+                    Moratuwa</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                    Peradeniya</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                    Nugegoda</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-results">
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                    Dehiwala</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                    Katubadda</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                    Rathmalana</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-results">
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                    Malambe</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                    Homagama</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                    Wijerama</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Search Results End-->
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
