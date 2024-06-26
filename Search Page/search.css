@@ -1,0 +1,105 @@
+.Logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 20%;
+}
+
+.navbar_text {
+  --tw-text-opacity: 1;
+  color: #DCD7C9 !important;
+  background-color: #2C3639 !important;
+}
+
+.navbar_width {
+  width: 100%;
+  top: 0;
+  background-color: #2C3639;
+}
+
+.lis_horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.margin-R-20px {
+  margin-right: 10px;
+}
+
+.hover_navbar:hover {
+  color: #A27B5C !important;
+}
+
+.navbarbutton {
+  color: #2C3639 !important;
+  background-color: #DCD7C9 !important;
+}
+
+.bg-white {
+  background-color: #2C3639 !important;
+}
+
+.content_body {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.side_bar {
+  position: fixed !important;
+}
+
+.side_bar_top {
+  margin-top: 1rem;
+}
+
+.space-y-2 {
+  margin-left: -2rem;
+}
+
+.breadcrumb_bar {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.breadcrumb_text {
+  color: #2C3639 !important;
+}
+
+.main-box {
+  margin-top: 2rem !important;
+}
+
+.search-results {
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.results {
+  margin-left: 15rem;
+}
+
+.cards {
+  margin-right: 2rem !important;
+}
+
+.text-2xl {
+  color: #DCD7C9 !important;
+}
+
+.mb-2 {
+  color: #2C3639 !important;
+}
+
+.text-gray-700 {
+  color: #535352 !important;
+}
+
+.bg-blue-700 {
+  color: #2C3639 !important;
+  background-color: #DCD7C9 !important;
+}
+
+.ms-3 {
+  font-size: 20px !important;
+}
