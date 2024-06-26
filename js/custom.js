@@ -59,6 +59,7 @@ function getBoardingsAround(compound_code){
   
   $.ajax(settings).done(function (response) {
     console.log(response);
+    populateBoardingsaround(response);
   });
 }
 
@@ -79,9 +80,58 @@ function populateList( response) {
   });
 }
 
-function populateBoardingsaround( response) {
+function populateBoardingsaround(response) {
+  // Select the parent element where swiper slides are to be added
+  const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+  // Clear the parent element before adding new slides
+  swiperWrapper.innerHTML = '';
+
+  // Loop through the response array
+  response.forEach(boarding => {
+    // Create a new div element for each boarding
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+    slide.innerHTML = `
+      <div class="w-96 p-5 h-72">
+        <div class="border rounded-lg p-5 bg-brand-lightblue">
+          <img class="h-60 w-full object-cover rounded-md" src="data:image/png;base64,${boarding.image1}" alt="">
+          <div class="deets mt-10 max-h-full">
+            <div class="firsrow flex">
+              <div class="location flex">
+                <i class="fa-solid fa-location-dot pt-3 fa-lg" style="color: #dcd7c9;"></i>
+                <p class="text-Cream ml-6 text-lg maxwidth_137px">${boarding.city}</p>
+              </div>
+              <div class="boarder_type ml-10 flex w-full">
+                <i class="fa-solid fa-user pt-3 fa-lg" style="color: #dcd7c9;"></i>
+                <p class="text-Cream ml-3 text-lg max">${boarding.boarderType}</p>
+              </div>
+            </div>
+            <div class="secondrow pt-5 flex">
+              <div class="Bed flex">
+                <i class="fa-solid fa-bed pt-3 fa-lg" style="color: #dcd7c9;"></i>
+                <p class="text-Cream pl-3 text-lg text-left maxwidth_137px">${boarding.monthlyFee}</p>
+              </div>
+              <div class="room_type flex ml-5">
+                <i class="fa-solid fa-home pt-3 fa-lg" style="color: #dcd7c9;"></i>
+                <p class="text-Cream ml-3 text-lg">${boarding.boardingType}</p>
+              </div>
+            </div>
+            <button class="mt-10 px-6 py-3 rounded-md bg-brand-yellow text-brand-lightblue">Read More</button>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Append the slide to the swiper wrapper
+    swiperWrapper.appendChild(slide);
+  });
   
+  // If using SwiperJS, reinitialize or update the swiper here
+  // swiper.update(); or new Swiper('.swiper-container', {...});
 }
+
+
 
 
 function showLocation(lat, lng){
@@ -134,8 +184,8 @@ function filterLocations() {
 }
 
 function onloadfuncs(){
-  getUserLocation();
-  getCities();
+  getUserLocation(); //Getting User's Lat and Lang => triggers the getboardingsaround function
+  getCities(); //Get Ciies array and add to Locations drop down list
   }
 
 
