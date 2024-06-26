@@ -1,0 +1,29 @@
+.content-body{
+    margin: 2rem 4rem 2rem 4rem;
+}
+
+.heading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.left-part{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.property-listing{
+    width: 40%;
+    margin-left: 5rem;
+}
+
+.room_img{
+    width: 50%;
+}
+
+.upload-bar{
+    align-items: center;
+    margin: 2rem;
+}
