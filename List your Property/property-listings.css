@@ -27,3 +27,42 @@
     align-items: center;
     margin: 2rem;
 }
+
+.text-Cream{
+    color: #DCD7C9 !important;
+  }
+  
+.text-darktellow{
+color: #A27B5C !important;
+}
+
+.text-brandBLue{
+color: rgb(17 24 39) !important;
+}
+
+.text-brand-lightblue{
+color: #3F4E4F  !important;
+}
+
+
+.bg-brand-yellow{
+background-color:#DCD7C9 ;
+}
+
+.bg-brand-darkyellow{
+background-color:#A27B5C ;
+}
+
+.bg-brand-blue{
+background-color: rgb(17 24 39);
+}
+
+.bg-brand-lightblue{
+background-color: #3F4E4F;
+}
+
+#submitButton:disabled {
+    opacity: 0.5; /* Dull look */
+    cursor: not-allowed;
+}
+
