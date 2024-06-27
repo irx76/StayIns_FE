@@ -18,12 +18,12 @@
   <link rel="stylesheet" href="property-listings.css">
 </head>
 
-<body>
+<body class="bg-brand-blue">
 
   <!--Nav Bar-->
   <nav class="sticky bg-white border-gray-200 dark:bg-gray-900">
     <div class="navbar_width flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <a href="/Index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="LOGO.png" class="Logo" alt="Stay-Ins Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white navbar_text">Stay-Ins</span>
 
@@ -71,7 +71,7 @@
     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
       <li class="inline-flex items-center">
         <a href="#"
-          class="inline-flex items-center text-sm font-medium text-white hover:text-white dark:text-gray-400 dark:hover:text-white breadcrumb_text">
+          class="inline-flex items-center text-sm font-medium text-white hover:text-white dark:text-gray-400 dark:hover:text-white breadcrumb_text text-Cream">
           <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
             viewBox="0 0 20 20">
             <path
@@ -82,30 +82,29 @@
       </li>
       <li>
         <div class="flex items-center">
-          <svg class="rtl:rotate-180 w-3 h-3 text-white mx-1 breadcrumb_text" aria-hidden="true"
+          <svg class="text-Cream rtl:rotate-180 w-3 h-3 text-white mx-1 breadcrumb_text" aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="m1 9 4-4-4-4" />
           </svg>
           <a href="#"
-            class="ms-1 text-sm font-medium text-white hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white breadcrumb_text">List
-            Your Property</a>
+            class="ms-1 text-sm font-medium text-white hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white breadcrumb_text text-Cream">List Your Property</a>
         </div>
       </li>
     </ol>
   </nav>
   <!--Breadcrumb End-->
 
-  <h1 class="heading">List Your Property</h1>
+  <h1 class="heading text-Cream">List Your Property</h1>
 
-  &nbsp;<form class="max-w-sm mx-auto">
+  &nbsp;<form class="max-w-sm mx-auto" action="http://127.0.0.1:5000/listyourproperty" method="POST" id="propertyForm" enctype="multipart/form-data" >
     <div class="mb-5">
 
-      <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Boarding type</label>
+      <label for="boardingType" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Boarding type</label>
 
-      <select id="countries"
+      <select name="boardingType" id="boardingType"
         class="bg-gray-50 border border-gray-300 w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option diabled selected value="0">-- Choose an Option --</option>
+        <option diabled selected value="0">-- Boarding Type --</option>
         <option>Single room</option>
         <option>Double room</option>
         <option>Full house</option>
@@ -116,10 +115,10 @@
     </div>
 
     <div class="mb-5">
-      <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Boarder type</label>
-      <select id="countries"
+      <label for="boarderType" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Boarder type</label>
+      <select id="boarderType" name="boarderType"
         class="bg-gray-50 border border-gray-300 w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option diabled selected value="0">-- Choose an Option --</option>
+        <option diabled selected value="0">-- Boarder Type --</option>
         <option>Girls</option>
         <option>Boys</option>
         <option>Male job holders</option>
@@ -130,174 +129,84 @@
 
     </div>
     <div class="mb-5">
-      <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Property
+      <label for="size" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Property
         size (sqft)
       </label>
-      <input type="text" id="repeat-password"
+      <input type="text" id="size" name="size"
         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
         placeholder="Enter the size" required />
     </div>
+    
+    
     <div class="mb-5">
-      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Floor type</label>
-
-      <div class="flex items-center">
-        <input checked id="checked-checkbox" type="checkbox" value=""
-          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-        <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ground
-          Floor</label>
-      </div>
-      <div class="flex items-center">
-        <input checked id="checked-checkbox" type="checkbox" value=""
-          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-        <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">1st
-          Floor</label>
-      </div>
-      <div class="flex items-center">
-        <input checked id="checked-checkbox" type="checkbox" value=""
-          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-        <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">2nd
-          Floor</label>
-      </div>
-
-    </div>
-    <div class="mb-5">
-      <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
-      <select id="countries"
+      <label for="city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
+      <select id="city" name="city"
         class="bg-gray-50 border border-gray-300 w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
         <option diabled selected value="0">-- Choose an Option --</option>
         <option>Galle</option>
         <option>Matara</option>
         <option>Colombo</option>
+        <option>Moratuwa</option>
         <option>Gampaha</option>
       </select>
 
     </div>
+    
     <div class="mb-5">
-      <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Town</label>
-      <select id="countries"
-        class="bg-gray-50 border border-gray-300 w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option diabled selected value="0">-- Choose an Option --</option>
-        <option>Bambalapitiya</option>
-        <option>Nugegoda</option>
-        <option>Kirulapone</option>
-        <option>Kollupitiya</option>
-      </select>
-
-    </div>
-    <div class="mb-5">
-      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Monthly fee (Rs)
+      <label for="monthlyFee" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Monthly fee (Rs)
       </label>
-      <input type="text" id="password"
+      <input type="number" id="monthlyFee" name="monthlyFee"
         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
         placeholder="Enter the amount" required />
     </div>
     <div class="mb-5">
-      <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Key money
+      <label for="keyMoney" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Key money
         (Rs)
       </label>
-      <input type="text" id="repeat-password"
+      <input type="number" id="keyMoney" name="keyMoney"
         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
         placeholder="Enter the amount" required />
     </div>
 
 
     &nbsp;
-    <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload atleast 5
-      Images
+    <div>
+    <label for="uploadedImages" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload atleast 3
+      Images (Maximum 6)
 
     </label>
-    <div class="flex items-center justify-center w-full">
-      <label for="dropzone-file"
-        class="flex flex-col items-center justify-center w-full h-30 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-          <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-          </svg>
-          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to
-              upload</span> or drag and drop</p>
-          <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-        </div>
-        <input id="dropzone-file" type="file" class="hidden" />
-      </label>
-    </div>
-    <div class="flex items-center justify-center w-full">
-      <label for="dropzone-file"
-        class="flex flex-col items-center justify-center w-full h-30 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-          <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-          </svg>
-          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to
-              upload</span> or drag and drop</p>
-          <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-        </div>
-        <input id="dropzone-file" type="file" class="hidden" />
-      </label>
-    </div>
-    <div class="flex items-center justify-center w-full">
-      <label for="dropzone-file"
-        class="flex flex-col items-center justify-center w-full h-30 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-          <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-          </svg>
-          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to
-              upload</span> or drag and drop</p>
-          <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-        </div>
-        <input id="dropzone-file" type="file" class="hidden" />
-      </label>
-    </div>
-    <div class="flex items-center justify-center w-full">
-      <label for="dropzone-file"
-        class="flex flex-col items-center justify-center w-full h-30 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-          <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-          </svg>
-          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to
-              upload</span> or drag and drop</p>
-          <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-        </div>
-        <input id="dropzone-file" type="file" class="hidden" />
-      </label>
-    </div>
-    <div class="flex items-center justify-center w-full">
-      <label for="dropzone-file"
-        class="flex flex-col items-center justify-center w-full h-30 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-          <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-          </svg>
-          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to
-              upload</span> or drag and drop</p>
-          <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-        </div>
-        <input id="dropzone-file" type="file" class="hidden" />
-      </label>
-    </div>
+    <div id="uploadImages" class="flex items-center justify-center w-full">
 
 
+      <label for="dropzone-file"
+        class="flex flex-col items-center justify-center w-full h-30 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+          <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+          </svg>
+          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to
+              upload</span> or drag and drop</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+        </div>
+        <input id="dropzone-file" name="dropzone-file" type="file" class="hidden" multiple accept="image/jpeg, image/png" onchange="handleFiles(this.files)"/>
+        <div id="image-preview" class="flex flex-wrap gap-2 mt-2"></div>
+        </div>
+      </label>
+    </div>
+    
 
-
-    &nbsp;<label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+    &nbsp;
+    <div id="description">
+    <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
       Property description</label>
-    <textarea id="message" rows="6"
+    <textarea id="description" name="description" rows="6"
       class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       placeholder="Enter the description you want to post..."></textarea>
-    <div class="flex items-start mb-5">
+    <div class=" pt-5 flex items-start mb-5">
       <div class="flex items-center h-5">
-        <input id="terms" type="checkbox" value=""
+        <input id="terms" name="terms" type="checkbox" value=""
           class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
           required />
       </div>
@@ -307,13 +216,77 @@
           class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
 
     </div>
-    <button type="submit"
-      class="udara text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    <button type="submit" id="submitButton" disabled="true" class="udara text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+    </div>
 
     &nbsp;
   </form>
 
+  <script>
+    let uploadedImages = [];
+  
+    function handleFiles(files) {
+      const filesArray = Array.from(files);
+      const newTotal = uploadedImages.length + filesArray.length;
+      if (newTotal <= 6) {
+        filesArray.forEach(file => {
+          if (!uploadedImages.includes(file)) { // Prevent duplicate files
+            uploadedImages.push(file);
+            const reader = new FileReader();
+            reader.onload = function(e) {
+              const imgContainer = document.createElement('div');
+              imgContainer.innerHTML = `<img src="${e.target.result}" class="w-20 h-20 object-cover pl-3"/><button onclick="removeImage('${file.name}')">Remove</button>`;
+              document.getElementById('image-preview').appendChild(imgContainer);
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      } else {
+        alert('You can only upload a maximum of 6 images.');
+      }
+      updateSubmitButtonState();
+    }
+  
+    function removeImage(fileName) {
+      uploadedImages = uploadedImages.filter(file => file.name !== fileName);
+      const previewContainer = document.getElementById('image-preview');
+      previewContainer.innerHTML = ''; // Clear current thumbnails
+      uploadedImages.forEach(file => { // Re-add remaining images to the preview
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const imgContainer = document.createElement('div');
+          imgContainer.innerHTML = `<img src="${e.target.result}" class="w-20 h-20 object-cover"/><button onclick="removeImage('${file.name}')">Remove</button>`;
+          previewContainer.appendChild(imgContainer);
+        };
+        reader.readAsDataURL(file);
+      });
+      updateSubmitButtonState();
+    }
+  
+    function updateSubmitButtonState() {
+      const submitButton = document.querySelector('button[type="submit"]');
+      const termsCheckbox = document.getElementById('terms'); // Assuming the ID of the terms checkbox is 'termsCheckbox'
+      const isTermsChecked = termsCheckbox.checked;
+      const areImagesUploaded = uploadedImages.length >= 3;
+    
+      submitButton.disabled = !(isTermsChecked && areImagesUploaded);
+    }
+  
+    document.getElementById('terms').addEventListener('change', updateSubmitButtonState);
+
+    document.getElementById('propertyForm').addEventListener('submit', function(e) {
+      if (uploadedImages.length < 3) {
+        e.preventDefault(); // Prevent form submission
+        alert('You must upload at least 3 images.');
+      }
+    });
+  </script>
+  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./js/listproperty.js" type="text/javascript"></script>
 
 </body>
 
