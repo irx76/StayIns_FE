@@ -69,19 +69,36 @@
 }
 
 .search-results {
-  display: flex;
+  display: flex ;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap size as needed */
   margin-left: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+/* #searchResults .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap size as needed */
+  margin-right: -20px;
+}
+ 
+*/
+
+#searchResults .cards > * {
+  flex: 0 0 calc(33.333% - 20px); /* Adjust based on the gap to ensure 3 items per row */
+  margin-right: 20px; /* This should match the gap for consistency */
+}
+
+.cardsminwidth{
+  min-width: 380px;
 }
 
 .results {
   margin-left: 15rem;
 }
 
-.cards {
-  margin-right: 2rem !important;
-}
 
 .text-2xl {
   color: #DCD7C9 !important;
@@ -102,4 +119,37 @@
 
 .ms-3 {
   font-size: 20px !important;
+}
+
+.text-Cream{
+  color: #DCD7C9 !important;
+}
+
+.text-darktellow{
+  color: #A27B5C !important;
+}
+
+.text-brandBLue{
+  color: rgb(17 24 39) !important;
+}
+
+.text-brand-lightblue{
+  color: #3F4E4F  !important;
+}
+
+
+.bg-brand-yellow{
+  background-color:#DCD7C9 ;
+}
+
+.bg-brand-darkyellow{
+  background-color:#A27B5C ;
+}
+
+.bg-brand-blue{
+  background-color: rgb(17 24 39);
+}
+
+.bg-brand-lightblue{
+  background-color: #3F4E4F;
 }

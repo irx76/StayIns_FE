@@ -17,11 +17,11 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body onload= "onloadf()"; >
   <!--Nav Bar-->
   <nav class="fixed sticky bg-white border-gray-200 dark:bg-gray-900">
     <div class="navbar_width fixed flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="LOGO.png" class="Logo" alt="Stay-Ins Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white navbar_text">Stay-Ins</span>
       </a>
@@ -173,129 +173,22 @@
 
       <!--Search Results-->
       <div class="main-box">
-        <div class="search-results">
-          <div class="cards">
+        <div id="searchResults" class="search-results">
+          <div  class="cards">
             <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
                 <img class="rounded-t-lg" src="Room.jpg" alt="" />
               </a>
               <div class="p-5">
                 <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Rooms for Rent in
-                    Moratuwa</h5>
-                </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
-                <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Read more
-                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="cards">
-            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                <img class="rounded-t-lg" src="Room.jpg" alt="" />
-              </a>
-              <div class="p-5">
-                <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
-                    Peradeniya</h5>
-                </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
-                <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Read more
-                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="cards">
-            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                <img class="rounded-t-lg" src="Room.jpg" alt="" />
-              </a>
-              <div class="p-5">
-                <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
-                    Nugegoda</h5>
-                </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
-                <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Read more
-                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="search-results">
-          <div class="cards">
-            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                <img class="rounded-t-lg" src="Room.jpg" alt="" />
-              </a>
-              <div class="p-5">
-                <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
-                    Dehiwala</h5>
-                </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
-                <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Read more
-                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="cards">
-            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                <img class="rounded-t-lg" src="Room.jpg" alt="" />
-              </a>
-              <div class="p-5">
-                <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-Cream h-20">Rooms for Rent in
                     Katubadda</h5>
                 </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400 text-Cream">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">for girls</p>
                 <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  class="inline-flex items-center mt-4 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Read more
                   <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 14 10">
@@ -314,42 +207,14 @@
               </a>
               <div class="p-5">
                 <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
-                    Rathmalana</h5>
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-Cream h-20">Rooms for Rent in
+                    Katubadda</h5>
                 </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400 text-Cream">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">for girls</p>
                 <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Read more
-                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="search-results">
-          <div class="cards">
-            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                <img class="rounded-t-lg" src="Room.jpg" alt="" />
-              </a>
-              <div class="p-5">
-                <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
-                    Malambe</h5>
-                </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
-                <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  class="inline-flex items-center mt-4 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Read more
                   <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 14 10">
@@ -368,14 +233,40 @@
               </a>
               <div class="p-5">
                 <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
-                    Homagama</h5>
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-Cream h-20">Rooms for Rent in
+                    Katubadda</h5>
                 </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400 text-Cream">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">for girls</p>
                 <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  class="inline-flex items-center mt-4 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+                
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-Cream h-20">Rooms for Rent in
+                    Katubadda</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400 text-Cream">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center mt-4 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Read more
                   <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 14 10">
@@ -394,14 +285,14 @@
               </a>
               <div class="p-5">
                 <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rooms for Rent in
-                    Wijerama</h5>
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-Cream h-20">Rooms for Rent in
+                    Katubadda</h5>
                 </a>
-                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400">LKR XXXXXXX</h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">3 Bedrooms</p>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">for girls</p>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400 text-Cream">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">for girls</p>
                 <a href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  class="inline-flex items-center mt-4 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Read more
                   <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 14 10">
@@ -412,13 +303,41 @@
               </div>
             </div>
           </div>
-        </div>
+
+          <div class="cards">
+            <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <img class="rounded-t-lg" src="Room.jpg" alt="" />
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-Cream h-20">Rooms for Rent in
+                    Katubadda</h5>
+                </a>
+                <h6 class="mb-3 font-bold text-gray-700 dark:text-gray-400 text-Cream">LKR XXXXXXX</h6>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">3 Bedrooms</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-Cream">for girls</p>
+                <a href="#"
+                  class="inline-flex items-center mt-4 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        
       </div>
       <!--Search Results End-->
     </div>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="./js/search.js" type="text/javascript"></script>
 </body>
 
 </html>

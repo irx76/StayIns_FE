@@ -1,0 +1,76 @@
+.Logo{
+    height: 60px;
+    width: 60px;
+    border-radius: 20%;
+}
+
+.navbar_text{
+    --tw-text-opacity: 1;
+    color: #DCD7C9 !important;
+    background-color: #2C3639 !important;
+}
+
+.navbar_width{
+    max-width: 1500px;
+}
+
+.lis_horizontal{
+    display: flex;
+    align-items: center;
+}
+
+.margin-R-20px{
+    margin-right: 10px;
+}
+
+.hover_navbar:hover{
+    color : #A27B5C !important;
+}
+
+.navbarbutton{
+    color: #2C3639 !important;
+    background-color: #DCD7C9 !important;
+}
+
+.bg-white{
+    background-color: #2C3639 !important;
+}
+
+.side_bar_top{
+    margin-top: 1rem;
+}
+
+.breadcrumb_bar{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.breadcrumb_text{
+    color: #2C3639 !important;
+}
+
+.heading{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+form{
+  margin-bottom: 4rem;
+
+}
+
+.udara {
+    color: #2C3639 !important;
+    background-color: #DCD7C9 !important;
+    background-color: whitesmoke !important;
+} 
+
+.dropdown_button{
+    background-color: #f9fafb !important;
+    border: 1px solid #d1d5db !important;
+}
+
+.dropdown_items{
+    background-color: #f9fafb !important;
+}
