@@ -190,7 +190,7 @@
               upload</span> or drag and drop</p>
           <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
         </div>
-        <input id="dropzone-file" name="dropzone-file" type="file" class="hidden" multiple accept="image/jpeg, image/png" onchange="handleFiles(this.files)"/>
+        <input id="dropzone-file" name="dropzone-file" type="file" class="hidden" multiple accept="image/jpeg, image/png, image/webp" onchange="handleFiles(this.files)"/>
         <div id="image-preview" class="flex flex-wrap gap-2 mt-2"></div>
         </div>
       </label>
@@ -222,6 +222,8 @@
 
     &nbsp;
   </form>
+
+  <div id="formResponse"></div> <!-- Place to show the response message -->
 
   <script>
     let uploadedImages = [];
