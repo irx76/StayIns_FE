@@ -17,7 +17,7 @@ function createCardHTML(boarding) {
     <div  class="cards">
       <div class=" border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cardsminwidth" style="max-width: 381px;"  >
         <a href="#">
-          <img class="rounded-t-lg cardsminwidth" style="max-width: 381px;" src="data:image/png;base64,${boarding.image1}" alt="" />
+          <img class="rounded-t-lg cardsminwidth" style="max-width: 381px; max-height:285px; min-height:285px" src="data:image/png;base64,${boarding.image1}" alt="" />
         </a>
         <div class="p-5">
           <a href="#">
