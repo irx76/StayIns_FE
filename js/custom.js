@@ -39,7 +39,7 @@ var swiper = new Swiper(".mySwiper", {
 
 function getCities(city){
   var settings = {
-    "url": "http://127.0.0.1:5000/?param=Cities_call",
+    "url": "https://stayins-be.onrender.com/?param=Cities_call",
     "method": "GET",
     "timeout": 0,
   };
@@ -52,7 +52,7 @@ function getCities(city){
 
 function getBoardingsAround(compound_code){
   var settings = {
-    "url": "http://127.0.0.1:5000/?param=BoardingsAround&UserCompoundCode="+compound_code,
+    "url": "https://stayins-be.onrender.com/?param=BoardingsAround&UserCompoundCode="+compound_code,
     "method": "GET",
     "timeout": 0,
   };
