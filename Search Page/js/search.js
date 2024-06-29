@@ -1,6 +1,6 @@
 function getBoardings() {
     var settings = {
-        "url": "http://127.0.0.1:5000/search",
+        "url": "https://stayins-be.onrender.com/search",
         "method": "GET",
         "timeout": 0,
       };
